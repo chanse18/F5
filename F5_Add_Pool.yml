@@ -1,3 +1,4 @@
+---
 - name: Create pool
   bigip_pool:
     state: present
