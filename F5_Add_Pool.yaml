@@ -1,0 +1,12 @@
+- name: Create pool
+  bigip_pool:
+    state: present
+    name: test-ansible-pool
+    partition: Common
+    lb_method: least-connections-member
+    slow_ramp_time: 120
+    provider:
+      server: 10.243.130.230
+      user: admin
+      password: admin
+  delegate_to: localhost
